@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         // 注册接收广播
         IntentFilter filter = new IntentFilter("com.mj.tcpoverws.UPDATE_LOG");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            registerReceiver(updateReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+            registerReceiver(updateReceiver, filter, Context.RECEIVER_EXPORTED);
         } else {
             registerReceiver(updateReceiver, filter);
         }
